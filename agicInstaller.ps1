@@ -320,10 +320,10 @@ if ($AKS_LOCAL_ACCOUNTS_ENABLED -eq "false")
     Read-Host -Prompt '--> '
     Write-host ""
 
-    Write-Host "We recomend that you export the configuration of your application gateway before moving forward." -ForegroundColor Yellow
-    Write-Host "---------------------------------------------------------------------------------------------------------------"
-    Read-Host -Prompt '--> Please, confirmm that you are aware of this and that you have saved the configuration of the application gateway... '
-    Write-host ""
+    #Write-Host "We recomend that you export the configuration of your application gateway before moving forward." -ForegroundColor Yellow
+    #Write-Host "---------------------------------------------------------------------------------------------------------------"
+    #Read-Host -Prompt '--> Please, confirmm that you are aware of this and that you have saved the configuration of the application gateway... '
+    #Write-host ""
     Write-Host "AAD Pod Identity is a controller, similar to AGIC, which also runs on your AKS. "
     Write-Host "It binds Azure Active Directory identities to your Kubernetes pods."
     Write-Host "Making sure that Pod Identity feature is enabled for your subscription..."
@@ -762,7 +762,7 @@ function fixNoIdentityError() {
 
     $GLOBAL_AGW_IDENTITY_NAME=$AGW_IDENTITY_NAME
     $AGW_MANAGED_IDENTITY_OBJECT=az identity show -g $NODE_AKS_RG -n $AGW_IDENTITY_NAME | ConvertFrom-Json
-    Write-Host "Identity $AGW_IDENTITY_NAME created in $NODE_AKS_RG..."  -ForegroundColor cyan
+    Write-Host "Identity $AGW_IDENTITY_NAME found in $NODE_AKS_RG..."  -ForegroundColor cyan
 
     $AGW_MANAGED_IDENTITY_ID=$AGW_MANAGED_IDENTITY_OBJECT.id
     $AGW_MANAGED_IDENTITY_CLIENTID=$AGW_MANAGED_IDENTITY_OBJECT.clientId
@@ -801,6 +801,8 @@ function fixNoIdentityError() {
   write-host "Listing the AGIC ingress pods:"
   kubectl get pods -l aadpodidbinding=ingress-azure -A
   write-host "The READY field should show 1/1:"
+  Read-Host -Prompt '--> Press ENTER to go to the main menu... '
+
 }
 
 
