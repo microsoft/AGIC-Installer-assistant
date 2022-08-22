@@ -189,11 +189,13 @@ if ($loggedin -eq "y") {
 
 $AKS_LOCAL_ACCOUNTS_ENABLED=az aks show -g $NODE_AKS_RG -n $AKS_CLUSTER_NAME --query disableLocalAccounts  -o tsv
 emptyLine
+$ASK_TO_DISABLE_LOCAL_ACCOUNTS = $false
 if ($AKS_LOCAL_ACCOUNTS_ENABLED -eq "false")
 {
   write-host "This cluster has local accounts enabled so we connect through the local admin" -ForegroundColor Green
   az aks get-credentials --resource-group $NODE_AKS_RG --name $AKS_CLUSTER_NAME --admin
   $DECISION ="n" #to avoid the installation of local accountes in the next step
+
 }else{
 
 
@@ -208,6 +210,7 @@ if ($AKS_LOCAL_ACCOUNTS_ENABLED -eq "false")
     az aks update -g $NODE_AKS_RG -n $AKS_CLUSTER_NAME --enable-local
     write-host "This cluster has NOW local accounts enabled so we connect through the local admin" -ForegroundColor Green
     az aks get-credentials --resource-group $NODE_AKS_RG --name $AKS_CLUSTER_NAME --admin
+    $ASK_TO_DISABLE_LOCAL_ACCOUNTS = $true
   }else{
     write-host "This cluster has  local accounts disabled so we connect with the user running this process" -ForegroundColor Green
     az aks get-credentials --resource-group $NODE_AKS_RG --name $AKS_CLUSTER_NAME
@@ -659,6 +662,15 @@ rbac:
 
     #solving the identity not found error:
 
+    #if we enabled the local accounts, we ask to disable the local accounts
+    if ($ASK_TO_DISABLE_LOCAL_ACCOUNTS ) {
+      Write-Host ""
+      $answer = Read-Host -Prompt "We enabled local accounts in a previous step, do you want to disable the local accounts? (y/n) (default y)" -DefaultAnswer y
+      if ($answer -eq "y") {
+        az aks update -g $NODE_AKS_RG -n $AKS_CLUSTER_NAME --disable-local-accounts
+        write-host "Local accounts disabled"
+      }
+    }
     Write-Host "helm installation completed... TEST the AGIC CONTROLLER" -ForegroundColor Cyan
     Read-Host -Pompt "Press ENTER to go to main menu"
 
