@@ -19,9 +19,9 @@ The AGIC installation assistant assumes you already have the following tools and
 - AAD Pod Identity installed on your AKS cluster. The assitant will check this and enable it.
 - The script will create a Mange Identity and it requires Contributor rights over your AD Tenant.
 - Make sure your Azure Cloud Shell has the below elements installed:
--   Az CLI,
--   kubectl,
--   Helm 3.0
+  -   Az CLI,
+  -   kubectl,
+  -   Helm 3.0
 
 
 Before running the powershell script, we recommend that you peform the following actions:
