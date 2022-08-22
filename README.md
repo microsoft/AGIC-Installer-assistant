@@ -17,7 +17,7 @@ The AGIC installation assistant assumes you already have the following tools and
 - AKS with Advanced Networking enabled (CNI). The script has been tested only with CNI networking configuration and it and will not let you continue if you have Kubenet.
 - App Gateway v2 in the same virtual network as AKS (App Gateway in different VNET has not been tested using this script yet).
 - AAD Pod Identity installed on your AKS cluster. The assitant will check this and enable it.
-- The script will create a Mange Identity and it requires Contributor rights over your AD Tenant.
+- The script will create a User Mangaged Identity and it requires the ability to do so in your selected AD Tenant.
 - Make sure your Azure Cloud Shell has the below elements installed:
   -   Az CLI,
   -   kubectl,
