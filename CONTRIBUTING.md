@@ -8,7 +8,7 @@ The following is a set of guidelines for contributing to the AGIC Installer assi
 
 ### Reporting Bugs
 
-This section guides you through submitting a bug report for Atom. Following these guidelines helps maintainers and the community understand your report :pencil:, reproduce the behavior :computer: :computer:, and find related reports :mag_right:.
+This section guides you through submitting a bug report for AGIC Installer. Following these guidelines helps maintainers and the community understand your report :pencil:, reproduce the behavior :computer: :computer:, and find related reports :mag_right:.
 
 Before creating bug reports, please review previous issuses, as you might find out that you don't need to create one. When you are creating a bug report,
 
@@ -19,7 +19,7 @@ Before creating bug reports, please review previous issuses, as you might find o
 Explain the problem and include additional details to help maintainers reproduce the problem:
 
 * **Use a clear and descriptive title** for the issue to identify the problem.
-* **Describe the exact steps which reproduce the problem** in as many details as possible. For example, start by explaining how you started Atom, e.g. which command exactly you used in the terminal, or how you started Atom otherwise. When listing steps, **don't just say what you did, but explain how you did it**. For example, if you moved the cursor to the end of a line, explain if you used the mouse, or a keyboard shortcut or an Atom command, and if so which one?
+* **Describe the exact steps which reproduce the problem** in as many details as possible. For example, start by explaining how you started AGIC Installer, e.g. which command exactly you used in the terminal, or how you started AGIC Installer otherwise. When listing steps, **don't just say what you did, but explain how you did it**. For example, if you moved the cursor to the end of a line, explain if you used the mouse, or a keyboard shortcut or an AGIC Installer command, and if so which one?
 * **Provide specific examples to demonstrate the steps**. Include links to files or GitHub projects, or copy/pasteable snippets, which you use in those examples.
 * **Describe the behavior you observed after following the steps** and point out what exactly is the problem with that behavior.
 * **Explain which behavior you expected to see instead and why.**
@@ -36,7 +36,7 @@ Include details about your configuration and environment:
 
 ### Suggesting Enhancements
 
-This section guides you through submitting an enhancement suggestion for Atom, including completely new features and minor improvements to existing functionality. Following these guidelines helps maintainers and the community understand your suggestion :pencil: and find related suggestions :mag_right:.
+This section guides you through submitting an enhancement suggestion for AGIC Installer, including completely new features and minor improvements to existing functionality. Following these guidelines helps maintainers and the community understand your suggestion :pencil: and find related suggestions :mag_right:.
 
 Before creating enhancement suggestions, please check history as you might find out that you don't need to create one. 
 
@@ -46,8 +46,8 @@ Before creating enhancement suggestions, please check history as you might find 
 * **Provide a step-by-step description of the suggested enhancement** in as many details as possible.
 * **Provide specific examples to demonstrate the steps**. Include copy/pasteable snippets which you use in those examples.
 * **Describe the current behavior** and **explain which behavior you expected to see instead** and why.
-* **Include screenshots and animated GIFs** which help you demonstrate the steps or point out the part of Atom which the suggestion is related to.
-* **Explain why this enhancement would be useful** to most Atom users and isn't something that can or should be implemented. 
+* **Include screenshots and animated GIFs** which help you demonstrate the steps or point out the part of AGIC Installer which the suggestion is related to.
+* **Explain why this enhancement would be useful** to most AGIC Installer users and isn't something that can or should be implemented. 
 * **List some other text editors or applications where this enhancement exists.**
 * **Specify the name and version of the OS you're using.**
 
@@ -58,7 +58,7 @@ The process described here has several goals:
 
 - Maintain AGIC Installer's quality
 - Fix problems that are important to users
-- Engage the community in working toward the best possible Atom
+- Engage the community in working toward the best possible AGIC Installer
 
 
 ### Git Commit Messages
